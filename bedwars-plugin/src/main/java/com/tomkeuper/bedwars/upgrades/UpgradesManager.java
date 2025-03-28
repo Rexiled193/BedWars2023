@@ -527,3 +527,18 @@ public class UpgradesManager {
         return menuContentByName;
     }
 }
+
+public int getUpgradeCost(int playersPerTeam, int totalTeams) {
+    int upgradeCost;
+
+    if playersPerTeam == 2 { // 2v2 mode
+        upgradeCost = 10;  // Lower cost for 2v2
+    } else if playersPerTeam == 4 { // 4v4 mode
+        upgradeCost = 20;  // Higher cost for 4v4
+    } else {
+        upgradeCost = 15;  // Default cost if other configurations are used
+    }
+
+    return upgradeCost;
+}
+
